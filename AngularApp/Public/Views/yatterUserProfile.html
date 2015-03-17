@@ -1,0 +1,91 @@
+<section class="userProfile">
+<!-- User Profile -->
+	<div class="profile" >
+		<h2 class="userName">Hello {{ currentUser.firstname }}</h2>	
+		<p><strong>{{currentUser.points}}</strong> &#9733;</p>
+		</br>
+		<form name ="myForm"
+		ng-submit="updateProfile()"
+		ng-show="editingProfile"
+		novalidate>
+
+<!-- Image Upload -->
+	<p class="updateProfile">Add Profile Image</p>
+		<input class="imgInput" ng-model='file' type="file"/>
+		</br>
+    	<button ng-click="addImg()"  class="imgUpload">Upload</button>
+    	</br>
+    <p class="updateProfile">Update Profile</p>
+
+
+<!-- Firstname Input-->
+		<input type="firstname"  name="firstname" placeholder="{{ currentUser.firstname }}" 
+			ng-model="user.firstname" ng-required="true">
+		</br>
+
+<!-- Lastname Input -->
+
+		<input type="lastname"  name="lastname" placeholder="{{ currentUser.lastname }}" 
+			ng-model="user.lastname" ng-required="true">
+		</br>
+<!-- Email Address Input -->
+		<input type="email"  name="email" placeholder="{{ currentUser.email }}" 
+			ng-model="user.email" ng-required="true">
+		</br>
+<!-- Location Input-->
+		<input type="text"  name="location" placeholder="Location ex. Orlando, FL" 
+			ng-model="location" ng-required="true">
+			
+			<!-- Below is an error validation message using ng-show -->
+			<p class="errorValidation" 
+			ng-show="myForm.location.$invalid && myForm.location.$touched"> 
+			Please enter a valid location</p>
+			<br/>
+<!-- Website Input -->
+		<input type="text"  name="userUrl" placeholder="Personal site Url" 
+			ng-model="userUrl" ng-required="true">
+			</br>
+
+<!-- Content Input -->
+		<textarea rows="6" cols="30" type="text"  name="biography"  placeholder="A little bit about yourself..."
+			ng-model="biography" ng-required="true"></textarea>
+			<!-- Below is an error validation message using ng-show -->
+			<p class="errorValidation" 
+			ng-show="myForm.biography.$invalid && myForm.biography.$touched"> 
+			Please enter a brief bio</p>
+			<br/>
+
+<!-- Submit Form -->
+		<button class="btn" type="submit">Update</button>
+	</form>
+	</div>
+
+
+<div ng-click="editProfile()" ng-hide="editingProfile">
+	<p class="updateField">{{ currentUser.firstname }}</p>
+	</br>
+	<p class="updateField">{{ currentUser.lastname }}</p>
+	</br>
+	<p class="updateField">{{ currentUser.email }}</p>
+	</br>
+	<p class="updateField">{{ currentUser.location }}</p>
+	</br>
+	<p class="updateField">{{ currentUser.userUrl }}</p>
+	</br>
+	<p class="updateField">{{ currentUser.biography }}</p>
+	</br>
+
+	<button class="btn">Edit</button>
+
+</div>
+
+
+
+
+<!-- Friends List-->
+	<div class="friendsList">
+		<h2>Friends List</h2>
+		<p>What are they up to?</p>
+	</div>
+
+</section>

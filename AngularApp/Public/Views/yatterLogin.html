@@ -1,0 +1,56 @@
+<section class="login">
+	<div class="formLeftFloat"> 
+	<form name ="myForm"
+	ng-submit="login()"
+	novalidate>
+		<h2>Login Form</h2>
+		<p>Start some Yatter.</p>
+		<br/>
+<!-- Incorrect Credentials Validation -->
+			<p class="errorValidation" 
+			ng-show="authError"> 
+			{{authError}}</p>
+
+<!-- Email Address Input -->
+		<input type="email"  name="email" placeholder="Email address" 
+			ng-model="user.email" ng-required="true">
+			
+			<!-- Below is an error validation message using ng-show -->
+			<p class="errorValidation" 
+			ng-show="myForm.email.$invalid && myForm.email.$touched"> 
+			Must enter a valid Email address.</p>
+			<br/>
+
+<!-- Password Input -->
+		<input type="password" name="password" placeholder="Password"
+			ng-model="user.password" ng-required="true">
+
+			<!-- Below is an error validation message using ng-show -->
+			<p class="errorValidation" 
+			ng-show="myForm.password.$invalid && myForm.password.$touched"> 
+			Must enter a Password.</p>
+			<br/>
+<!-- Submit Form -->
+		<button class="btn" ng-disabled="myForm.$invalid">Login</button>
+		<br/>
+		<p>or <a href="#/register"> Register</a></p>
+
+	</form>
+	</div>
+
+
+
+	<div class="formDescription">
+		<h2>Join the Conversation</h2>
+		<p>Start a topic of your own.</p>
+		<br/>
+		<h4>Connect with the world around you.</h4>
+		<br/>
+		<h4>Get in the moment updates on topics across the globe.</h4>
+		<br/>
+		<h4>Have amazing content or an experiance you'd love to share?</h4>
+		<br/>
+		<h4 class="colorTitle">Are you a Developer?</h4>
+		<h4>Yatter has open-sourced tools and libraries to help you create a great web experience for everyone.</h4>
+	</div>
+</section>

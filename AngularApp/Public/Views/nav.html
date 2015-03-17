@@ -1,0 +1,12 @@
+
+<div id="navigation">
+	<h1>Yatter.com</h1>
+		<span class="navList">
+			<li ng-hide="currentUser"><a href="#/register">Register</a></li>
+			<li ng-show="currentUser"><a href ="#/userProfile">Hello {{currentUser.firstname}}</a></li>
+
+			<li ng-hide="currentUser"><a href="#/login" >Login</a></li>
+			<li ng-show="currentUser" ng-click="authObj.$unauth()"><a href="#/">Log out</a></li>
+		</span>
+</div>
+

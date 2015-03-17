@@ -1,0 +1,66 @@
+<section class="register"> 
+	<div class="formLeftFloat">
+	<form name ="myForm"
+	ng-submit="register()"
+	novalidate>
+		<h2>Registration Form</h2>
+		<p>It's free and always will be.</p>
+		<br/>
+
+<!-- Firstname Input-->
+		<input type="firstname"  name="firstname" placeholder="First Name" 
+			ng-model="user.firstname" ng-required="true">
+			
+			<!-- Below is an error validation message using ng-show -->
+			<p class="errorValidation" 
+			ng-show="myForm.firstname.$invalid && myForm.firstname.$touched"> 
+			Must enter a first name.</p>
+			<br/>
+<!-- Lastname Input -->
+		<input type="lastname"  name="lastname" placeholder="Last Name " 
+			ng-model="user.lastname" ng-required="true">
+			
+			<!-- Below is an error validation message using ng-show -->
+			<p class="errorValidation" 
+			ng-show="myForm.lastname.$invalid && myForm.lastname.$touched"> 
+			Must enter a last name.</p>
+			<br/>
+<!-- Email Address Input -->
+		<input type="email"  name="email" placeholder="Email address" 
+			ng-model="user.email" ng-required="true">
+			
+			<!-- Below is an error validation message using ng-show -->
+			<p class="errorValidation" 
+			ng-show="myForm.email.$invalid && myForm.email.$touched"> 
+			Must enter a valid Email address</p>
+			<br/>
+<!-- Password Input -->
+		<input type="password" name="password" placeholder="Password"
+			ng-model="user.password" ng-required="true">
+
+			<!-- Below is an error validation message using ng-show -->
+			<p class="errorValidation" 
+			ng-show="myForm.password.$invalid && myForm.password.$touched"> 
+			Must enter a password.</p>
+			<br/>
+<!-- Submit Form -->
+		<button class="btn" ng-disabled="myForm.$invalid">Register</button>
+		<br/>
+		<p>or <a href="#/login"> Login</a></p>
+	</form>
+	</div>
+
+	<div class="formDescription">
+		<h2>Join the Conversation</h2>
+		<p>Start a topic of your own.</p>
+		<br/>
+		<h4>Connect with the world around you.</h4>
+		<br/>
+		<h4>Get in the moment updates on topics across the globe.</h4>
+		<br/>
+		<h4>Have amazing content or an experiance you'd love to share?</h4>
+		<br/>
+		<h4 class="colorTitle">Are you a Developer?</h4>
+		<h4>Yatter has open-sourced tools and libraries to help you create a great web experience for everyone.</h4>
+	</div>
+</section>

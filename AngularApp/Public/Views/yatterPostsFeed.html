@@ -1,0 +1,58 @@
+<section class="postFeed">
+	<div class="trendingTopics">
+	<h2>Trending Topics</h2>	
+	<p>Whats all the Yatter about?</p>
+		<div id="scrollBox">
+			<div class="postSection" ng-repeat="post in posts">
+				<h3 class"postTitle">{{post.title}}</h3></br>
+				<h4 class"postDescription">{{post.description}}</h4></br>
+				<h5 class"postAuthor">Author: {{ post.firstname }}</h5></br>
+				<p class"postContent">{{post.content}}</p></br>
+				<p>{{post.date}}</p>
+				<button class="btn-delete" ng-click="deletePost(post.$id)"><span>Delete</span></button>
+			</div>
+		</div><!-- ScrollBox -->
+	</div>
+
+
+
+	<div class="createTopic">
+		<h2>Create a Topic</h2>
+		<p>Start some Yatter.</p>
+		</br>
+		<form name="postForm"
+		ng-submit="addPost()"
+		novalidate>
+
+<!-- Title Input-->
+		<input type="title"  name="title" placeholder="Topic Title" 
+			ng-model="title" ng-required="true">
+			
+			<!-- Below is an error validation message using ng-show -->
+			<p class="errorValidation" 
+			ng-show="postForm.title.$invalid && postForm.title.$touched"> 
+			Gotta give it a title. </p>
+			<br/>
+<!-- Description Input -->
+		<input type=" description"  name="description" placeholder="Topic Description" 
+			ng-model="description" ng-required="true">
+			
+			<!-- Below is an error validation message using ng-show -->
+			<p class="errorValidation" 
+			ng-show="postForm.description.$invalid && postForm.description.$touched"> 
+			Gotta give it a description.</p>
+			<br/>
+<!-- Content Input -->
+		<textarea rows="6" cols="30" type="text"  name="content"  placeholder="Type Kindly..."
+			ng-model="content" ng-required="true"></textarea>
+			<!-- Below is an error validation message using ng-show -->
+			<p class="errorValidation" 
+			ng-show="postForm.content.$invalid && postForm.content.$touched"> 
+			Gotta give it content.</p>
+			<br/>
+
+<!-- Submit Form -->
+		<button class="btn" ng-disabled="postForm.$invalid">Post</button>
+	</form>
+	</div>
+</section>

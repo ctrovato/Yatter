@@ -2,7 +2,7 @@
 <!-- User Profile -->
 	<div class="profile" >
 		<h2 class="userName">Hello {{ currentUser.firstname }}</h2>	
-		<p><strong>{{currentUser.points}}</strong> &#9733;</p>
+		<p><strong>{{currentUser.points}}</strong> &#9733;  points</p>
 		</br>
 		<form name ="myForm"
 		ng-submit="updateProfile()"
@@ -10,10 +10,12 @@
 		novalidate>
 
 <!-- Image Upload -->
-	<p class="updateProfile">Add Profile Image</p>
-		<input class="imgInput" ng-model='file' type="file"/>
-		</br>
+	<p class="updateProfile">Profile Image</p>
+		<input class="hidden" type="file" accept="image/*" capture="camera" id="file-upload">
+		<br/>
     	<button ng-click="addImg()"  class="imgUpload">Upload</button>
+    	</br>
+    	<img class="pano" />
     	</br>
     <p class="updateProfile">Update Profile</p>
 
@@ -61,17 +63,23 @@
 	</div>
 
 
-<div ng-click="editProfile()" ng-hide="editingProfile">
+<div class="profileInfo" ng-click="editProfile()" ng-hide="editingProfile">
+	<p>First name</p>
 	<p class="updateField">{{ currentUser.firstname }}</p>
 	</br>
+	<p>Last name</p>
 	<p class="updateField">{{ currentUser.lastname }}</p>
 	</br>
+	<p>Email Address</p>
 	<p class="updateField">{{ currentUser.email }}</p>
 	</br>
+	<p>Your Location</p>
 	<p class="updateField">{{ currentUser.location }}</p>
 	</br>
+	<p>Personal Site</p>
 	<p class="updateField">{{ currentUser.userUrl }}</p>
 	</br>
+	<p>Your Bio</p>
 	<p class="updateField">{{ currentUser.biography }}</p>
 	</br>
 
@@ -85,7 +93,7 @@
 <!-- Friends List-->
 	<div class="friendsList">
 		<h2>Friends List</h2>
-		<p>What are they up to?</p>
+		<p><a href="#/postsFeed" class="friendsListLink">What are they up too?</a></p>
 	</div>
 
 </section>

@@ -13,39 +13,43 @@ app.controller('usersController',
 			if (authData) {
 				var userRef =  new Firebase(url + "users/" + authData.uid);
 				$scope.sync = $firebase(userRef);
-				$rootScope.currentUser = $scope.sync.$asObject();
+				$rootScope.currentUser = $scope.sync.$asObject()
 
-				$scope.firstname = $scope.currentUser.firstname;
-				$scope.lastname = $scope.currentUser.lastname;
-				$scope.email = $scope.currentUser.email;
+				$rootScope.currentUser.$loaded().then(function(){
+					$scope.user = {};
+					$scope.user.firstname = $rootScope.currentUser.firstname;
+					$scope.user.lastname = $rootScope.currentUser.lastname;
+					$scope.user.email = $rootScope.currentUser.email;
 				
-				console.log($scope.currentUser);
+					console.log("logged in", $scope.currentUser);
+				});
+
+				
 
 			} else {
 				console.log("Logged out");
 			}
 		});
 
-
 		$scope.updateProfile = function(){
-			console.log("hello");
-			$scope.currentUser.firstname = $scope.firstname;
-			$scope.currentUser.lastname = $scope.lastname;
-			$scope.currentUser.email = $scope.email;
-			$scope.currentUser.location = $scope.location;
-			$scope.currentUser.userUrl = $scope.userUrl;
-			$scope.currentUser.biography = $scope.biography;
+			console.log("hello", $scope.user.firstname);
+			$rootScope.currentUser.firstname = $scope.user.firstname;
+			$rootScope.currentUser.lastname = $scope.user.lastname;
+			// $rootScope.currentUser.email = $scope.user.email;
+			$rootScope.currentUser.location = $scope.location;
+			$rootScope.currentUser.userUrl = $scope.userUrl;
+			$rootScope.currentUser.biography = $scope.biography;
 
 
-			$scope.currentUser.$save().then(function(){
-				$scope.location = '';
-				$scope.userUrl = '';
-				$scope.biography = '';
-				$scope.postForm.$setUntouched();
+			$rootScope.currentUser.$save().then(function(){
+				// $scope.location = '';
+				// $scope.userUrl = '';
+				// $scope.biography = '';
+				// $scope.postForm.$setUntouched();
 			})
 
 			$scope.editingProfile = false;
-						consol.log($scope.editingProfile);
+			console.log($scope.editingProfile);
 
 
 		

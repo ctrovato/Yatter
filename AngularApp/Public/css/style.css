@@ -44,12 +44,12 @@ a:hover{
 
 h1{
 	text-indent: -9999px;
-	background: url(../images/Yatter.png);
+	background: url(../images/YatterIndex.png);
 	background-repeat: no-repeat;
 	padding-bottom: 20px;
 	margin-right: 0px;
 	padding-right: 0px; 
-	width: 200px;
+	width: 220px;
 	display: inline-block;
 	margin-right: 10px;
 }

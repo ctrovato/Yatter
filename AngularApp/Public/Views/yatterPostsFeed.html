@@ -8,8 +8,11 @@
 					<h3 class"postTitle">{{post.title}}</h3></br>
 					<h4 class"postDescription">{{post.description}}</h4></br>
 					<p class"postContent">{{post.content}}</p></br>
-						<button class="btn-like" ng-click="likePost(post.$id)"><span>Like</span></button>
-						<button ng-hide="post.uid != currentUser.uid" class="btn-delete" ng-click="deletePost(post.$id)"><span>Delete</span></button>
+
+
+						<button class="btn-like" ng-click="likePost(post)"><span>Like</span></button>
+						<button ng-hide="post.uid != currentUser.uid" class="btn-delete" ng-click="deletePost(post.$id)"><span>Delete</span></button><p>{{post.likes}}  likes</p>
+
 				</div><!-- .postBorder -->
 				<h5 class"postAuthor">Posted by {{ post.firstname }} at {{ post.date | date:'short' }}</h5></br>
 			</div><!-- .postSection -->

@@ -24,8 +24,6 @@ app.controller('usersController',
 					console.log("logged in", $scope.currentUser);
 				});
 
-				
-
 			} else {
 				console.log("Logged out");
 			}
@@ -52,7 +50,6 @@ app.controller('usersController',
 			console.log($scope.editingProfile);
 
 
-		
 		} //updateProfile()
 
 

@@ -49,15 +49,15 @@ app.controller('PostsController',
 		} //addPost
 
 
-		$scope.likePost = function(){
-			console.log($scope.posts);
-			$scope.posts.$add({
-				uid: $rootScope.currentUser.uid,
-			});
+		$scope.likePost = function(post){
+			if (post.likes == null){
+				post.likes = 0;
+			}
+			post.likes++
+			console.log(post)
+			$scope.posts.$save(post)
+			// $rootScope.like.uid.points += 50;
 
-			$rootScope.post.uid.points += 50;
-			$rootScope.currentUser.$save();
-		
 		} //likePost
 
 

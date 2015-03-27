@@ -1,0 +1,68 @@
+{
+  "-JkZv23OUFqzIuuXKMzi" : {
+    "content" : "sdkfhbsdf",
+    "description" : "sdfkjb",
+    "title" : "dfknb"
+  },
+  "posts" : {
+    "-Jl8Iw4BKT69rUVrsHnM" : {
+      "content" : "Dreamcatcher PBR shabby chic, small batch Banksy mlkshk direct trade hashtag butcher Carles messenger bag keytar. Leggings Brooklyn 3 wolf moon, distillery taxidermy whatever mumblecore ugh deep v retro brunch disrupt seitan Carles. Lo-fi letterpress cold-pressed literally. American Apparel locavore butcher, wolf before they sold out mixtape quinoa slow-carb pug narwhal Intelligentsia cronut Kickstarter dreamcatcher.",
+      "date" : 1427159105945,
+      "description" : "Hipster",
+      "firstname" : "Carmine",
+      "likes" : 25,
+      "title" : "Carmines Hipster Thoughts",
+      "uid" : "simplelogin:19"
+    },
+    "-Jl8KRKxaFMobafqQM1p" : {
+      "content" : "Single-origin coffee vegan scenester, lumbersexual skateboard kale chips church-key normcore post-ironic yr food truck. Kitsch actually mlkshk, vegan DIY cold-pressed ennui Vice VHS blog organic direct trade +1. Fashion axe messenger bag organic, Williamsburg letterpress PBR bitters Echo Park post-ironic. Odd Future gentrify hashtag narwhal actually listicle fap pug Schlitz, master cleanse Intelligentsia pork belly vinyl. Ugh umami bicycle rights meditation.",
+      "date" : 1427159500230,
+      "description" : "Hipsters",
+      "firstname" : "Carmine",
+      "likes" : 3,
+      "title" : "Things Hipsters Say",
+      "uid" : "simplelogin:19"
+    },
+    "-Jl92Gw3yB5EamMEea9p" : {
+      "content" : "Brooklyn 3 wolf moon, distillery taxidermy whatever mumblecore ugh deep v retro brunch disrupt seitan Carles. Lo-fi letterpress cold-pressed literally. American Apparel locavore butcher, wolf before they sold out mixtape quinoa slow-carb pug narwhal Intelligentsia cronut Kickstarter dreamcatcher.",
+      "date" : 1427171516244,
+      "description" : "Hipster",
+      "firstname" : "Seth",
+      "likes" : 6,
+      "title" : "Seths Hipster Thoughts",
+      "uid" : "simplelogin:21"
+    },
+    "-JlLgQGfxD29CbNPpYVO" : {
+      "content" : "Brooklyn 3 wolf moon, distillery taxidermy whatever mumblecore ugh deep v retro brunch disrupt seitan Carles. Lo-fi letterpress cold-pressed literally. American Apparel locavore butcher, wolf before they sold out mixtape quinoa slow-carb pug narwhal Intelligentsia cronut Kickstarter dreamcatcher.",
+      "date" : 1427383628977,
+      "description" : "Hello",
+      "firstname" : "Rachel",
+      "title" : "Test",
+      "uid" : "simplelogin:22"
+    }
+  },
+  "users" : {
+    "simplelogin:19" : {
+      "biography" : "Stuff",
+      "email" : "trovato.carmine@gmail.com",
+      "firstname" : "Carmine",
+      "lastname" : "Trovato",
+      "location" : "Orlando, FL",
+      "points" : 1600,
+      "uid" : "simplelogin:19",
+      "userUrl" : "www.CarmineTrovato.com"
+    },
+    "simplelogin:21" : {
+      "email" : "shealy@gmail.com",
+      "firstname" : "Seth",
+      "lastname" : "Healy",
+      "uid" : "simplelogin:21"
+    },
+    "simplelogin:22" : {
+      "email" : "higleyrachel@gmail.com",
+      "firstname" : "Rachel",
+      "lastname" : "Higley",
+      "uid" : "simplelogin:22"
+    }
+  }
+}

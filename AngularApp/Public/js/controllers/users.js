@@ -21,16 +21,16 @@ app.controller('usersController',
 					$scope.user.lastname = $rootScope.currentUser.lastname;
 					$scope.user.email = $rootScope.currentUser.email;
 				
-					console.log("logged in", $scope.currentUser);
+					console.log("logged in", $scope.currentUser); //logging $scope.currentUser
 				});
 
 			} else {
-				console.log("Logged out");
+				console.log("Logged out");   //logging logged out
 			}
 		});
 
 		$scope.updateProfile = function(){
-			console.log("hello", $scope.user.firstname);
+			console.log("hello", $scope.user.firstname);   //logging $scope.user.firstname
 			$rootScope.currentUser.firstname = $scope.user.firstname;
 			$rootScope.currentUser.lastname = $scope.user.lastname;
 			// $rootScope.currentUser.email = $scope.user.email;
@@ -47,7 +47,7 @@ app.controller('usersController',
 			})
 
 			$scope.editingProfile = false;
-			console.log($scope.editingProfile);
+			console.log($scope.editingProfile); //logging $scope.editingProfile
 
 
 		} //updateProfile()

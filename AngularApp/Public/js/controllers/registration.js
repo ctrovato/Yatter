@@ -24,11 +24,11 @@ app.controller('RegistrationController',
 			return $scope.authObj.$authWithPassword({
 				email: $scope.user.email,
 				password: $scope.user.password
-			});
+			}); 
 		})
 		.then(function(authData){
 			$rootScope.authData = authData;
-			console.log("data", authData);
+			console.log("data", authData);   //logging authData
 
 			$scope.sync
 			.$set(authData.uid, {
@@ -48,14 +48,13 @@ app.controller('RegistrationController',
 		$scope.authObj.$authWithPassword({
 			email: $scope.user.email,
 			password: $scope.user.password})
-
-
-
+			//authentication for firebase if currentUser = authData will send to PostFeed
+			//catch if $scope.authError=error.message; will send to Login
 			.then(function(authData) {
 				$rootScope.currentUser = authData
 				$location.path('/postsFeed');
 			}).catch(function(error) {
-				console.log(error);
+				console.log(error);  //logging authData
 				$scope.authError=error.message;
 				$location.path('/login');
 			});

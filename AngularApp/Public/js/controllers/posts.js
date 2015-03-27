@@ -16,18 +16,18 @@ app.controller('PostsController',
 				$scope.sync = $firebase(userRef);
 				$rootScope.currentUser = $scope.sync.$asObject();
 				
-				console.log("logged in posts ", $rootScope.currentUser);
+				console.log("logged in posts ", $rootScope.currentUser); //logging $rootScope.currentUsers
 
 			} else {
 				$location.path("/login");
 			}
 		});
 
-		console.log($rootScope.currentUser);
+		console.log($rootScope.currentUser);  //logging $rootScope.currentUsers
 
 		$scope.addPost = function(){
 
-			console.log($scope.posts);
+			console.log($scope.posts); //logging $scope.posts
 			$scope.posts.$add({
 				firstname: $rootScope.currentUser.firstname,
 				uid: $rootScope.currentUser.uid,
@@ -42,7 +42,9 @@ app.controller('PostsController',
 				$scope.content = '';
 				$scope.postForm.$setUntouched();
 			})
-		
+
+
+			// the currentUser will recieve points for creating and posting a message
 			$rootScope.currentUser.points += 100;
 			$rootScope.currentUser.$save();
 		
@@ -54,7 +56,7 @@ app.controller('PostsController',
 				post.likes = 0;
 			}
 			post.likes++
-			console.log(post)
+			console.log(post) //logging posts
 			$scope.posts.$save(post)
 			// $rootScope.like.uid.points += 50;
 
